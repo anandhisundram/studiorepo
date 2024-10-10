@@ -1,0 +1,13 @@
+kind: PolicySeq
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: NewAnashpet_policies
+  version: 1.0
+  namespace: default
+  tags:
+    - pet_policies
+spec:
+  transport:
+    - $ref: default:NewAnashTransportPolicy:1.0
+  route:
+    - $ref: default:NewAnashRoutingPolicy:1.0

@@ -1,0 +1,15 @@
+projects:
+  My Pet Project:
+    description: ''
+    tags: []
+    assets:
+      api: []
+      api_spec: []
+      policies: []
+      otherFiles: []
+  GatewayAssets:
+    description: GatewayAssets
+    tags: []
+  GatewayAssets copy:
+    description: GatewayAssets
+    tags: []

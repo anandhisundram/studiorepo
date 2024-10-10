@@ -1,0 +1,9 @@
+kind: Route
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: "FastRoutingPolicy"
+  version: 1.0
+  namespace: default
+spec:
+  default-endpoint:
+    $ref: default:Fastdefault_endpoint:1.0

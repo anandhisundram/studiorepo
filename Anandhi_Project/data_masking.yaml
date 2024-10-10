@@ -1,0 +1,27 @@
+kind: policy
+metadata:
+  name: my_data_masking
+  version: 1.0
+  namespace: my_namespace
+  tags:
+    - masking
+spec:
+  enabled: true
+  consumerApplications: ''
+  maskingCriteria:
+        - queryExpression: ${}
+          maskingType: 'mask'
+          maskValue: ${}
+          pathType: jpath
+        - queryExpression: ${}
+          maskingType: 'mask'
+          maskValue: ${}
+          pathType: xpath
+  applyForTransactionLogging: true
+  applyForPayload: true          
+  namespace:
+      - namespacePrefix: ' '
+        namespaceUri: ' '
+  
+  
+  

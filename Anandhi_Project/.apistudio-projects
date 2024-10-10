@@ -1,0 +1,10 @@
+projects:
+  PetAPI:
+    description: Project for basic petstore API
+    tags:
+      - pet
+    assets:
+      api: []
+      api_spec: []
+      policies: []
+      otherFiles: []

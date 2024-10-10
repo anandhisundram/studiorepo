@@ -1,0 +1,10 @@
+kind: APISpec
+metadata:
+  name: orderAPI-spec
+  version: 1.0
+  tags: ['order', 'shopping']
+  namespace: Shopping
+  type: swagger
+spec: 
+  open-api:
+    version: 3.0

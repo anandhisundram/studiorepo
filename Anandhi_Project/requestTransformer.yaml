@@ -1,0 +1,31 @@
+kind: policy
+metadata:
+  name: my_request_transformation
+  version: 1.0
+  namespace: my_namespace
+  tags:
+    - transformation
+spec:
+  enabled: true
+  'OR':
+    - variable: ${request.query.QUERY_NAME}
+      operator: 'equals'
+      value: ${request.query.QUERY_NAME}
+  transformation:
+    httpMethodTransformation:
+        httpMethod: 'GET'
+    hearderQueryPathTransformation:
+        - variable: ${request.query.QUERY_NAME}
+          value: ${request.query.QUERY_NAME}
+          action: 'addOrModify'  #addorModiy and remove are supported
+        - variable: ${request.query.QUERY_NAME}
+          value: 
+          action: 'remove'  #addorModiy and remove are supported
+    payloadTransformation:
+      payloadType: 'json'
+      autoFormatPayload: true,
+      payload: '  '
+  transformationMetadata:
+    namespace:
+      - namespacePrefix: ' '
+        namespaceUri: ' '

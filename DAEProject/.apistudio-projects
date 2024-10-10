@@ -1,0 +1,8 @@
+projects:
+  DAE Project:
+    description: DAE Project
+    tags:
+      - dae
+  New Project:
+    description: new project
+    tags: []

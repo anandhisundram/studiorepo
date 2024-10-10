@@ -1,0 +1,18 @@
+kind: Endpoint
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: NewAnashdefault_endpoint
+  version: 1.0
+  namespace: default
+spec:
+  url: http://test.com
+  method: GET
+  connectTimeout: 30000
+  readTimeout: 200000
+  sslConfig:
+    keyStoreAlias: ""
+    keyAlias: ""
+    trustStoreAlias: ""
+  serviceRegistryParameters:
+    - name: ""
+      value: ""

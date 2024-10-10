@@ -1,0 +1,13 @@
+kind: API
+metadata:
+  name: orderAPI
+  version: 1.0
+  description: This is the order items API.
+  tags: ['order', 'shopping']
+  namespace: Shopping
+spec: 
+  api-spec:
+    $ref: 'Shopping:orderAPI-spec:1.0'
+  policy-seq: 
+    - $ref: log_invocation:v1
+    - $ref: 'global:MyAuthPolicy:v1'

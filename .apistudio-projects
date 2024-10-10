@@ -1,0 +1,23 @@
+projects:
+  Anandhi_Project:
+    description: My new project
+    tags: []
+    assets:
+      api: []
+      api_spec: []
+      policies: []
+      otherFiles: []
+  My Pet Project:
+    description: ''
+    tags: []
+    assets:
+      api:
+        - $ref: 'FastPetstoreAPI: 1.0'
+      api_spec: []
+      policies: []
+      otherFiles:
+        - Endpoint.yaml
+        - pet_policy.yaml
+        - Route.yaml
+        - spec.yaml
+        - Transport.yaml

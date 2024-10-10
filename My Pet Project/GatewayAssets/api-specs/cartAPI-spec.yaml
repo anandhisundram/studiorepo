@@ -1,0 +1,11 @@
+kind: APISpec
+metadata:
+  name: cartAPI-spec
+  version: 1.0
+  tags: ['cart', 'shopping']
+  type: open-api
+spec: 
+  open-api:
+    version: 3.0
+  
+  

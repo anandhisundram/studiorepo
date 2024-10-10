@@ -1,0 +1,13 @@
+kind: PolicySeq
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: Ppastpet_policies
+  version: 1.0
+  namespace: default
+  tags:
+    - pet_policies
+spec:
+  transport:
+    - $ref: default:PpastTransportPolicy:1.0
+  routing:
+    - $ref: default:PpastRoutingPolicy:1.0

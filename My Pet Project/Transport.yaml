@@ -1,0 +1,9 @@
+kind: Transport
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: FastTransportPolicy
+  version: 1.0
+  namespace: default
+spec: 
+    protocol:
+      - https

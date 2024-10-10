@@ -1,0 +1,17 @@
+kind: Api
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: FffffastPetstoreAPI
+  version: 1.0
+  namespace: default
+  tags:
+    - swagger
+    - petstore
+    - sample
+  type: REST
+spec:
+  mocked: true
+  api-spec:
+    $path: spec2.yaml
+  policy-seq: 
+    - $ref: default:Fffffastpet_policies:1.0

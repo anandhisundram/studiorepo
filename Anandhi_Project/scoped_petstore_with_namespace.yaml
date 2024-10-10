@@ -1,0 +1,17 @@
+kind: api
+metadata:
+  name: swagger_petstore
+  version: 1.0
+  tags:
+    - swagger
+    - petstore
+    - sample
+  type: REST
+  namespace: swagger
+spec:
+  api-spec: 
+    $ref: open_api_spec:1.0 
+  policies:
+   - $ref: swagger:my_route_policy:1.0
+  scopes:
+   - $ref: swagger:my_scope:1.0
