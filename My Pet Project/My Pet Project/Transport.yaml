@@ -1,9 +1,0 @@
-kind: Transport
-apiVersion: api.webmethods.io/beta
-metadata:
-  name: PpastTransportPolicy
-  version: 1.0
-  namespace: default
-spec: 
-    protocol:
-      - https

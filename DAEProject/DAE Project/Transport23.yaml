@@ -1,9 +1,0 @@
-kind: Transport
-apiVersion: api.webmethods.io/betasds
-metadata:
-  name: FffffastTransportPolicy
-  version: 1.0
-  namespace: default
-spec: 
-    protocol:
-      - http

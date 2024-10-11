@@ -1,6 +1,0 @@
-kind: Log
-metadata:
-  name: log_invocation
-  version: v1
-spec: 
-  auth_type: "api_key"
