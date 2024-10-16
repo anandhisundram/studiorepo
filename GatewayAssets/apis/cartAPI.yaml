@@ -1,0 +1,11 @@
+kind: API
+metadata:
+  name: cartAPI
+  version: 1.0
+  description: This is the shopping cart API
+  tags: ['cart', 'shopping']
+spec: 
+  api-spec:
+    $path: resource.yaml
+  policy-seq: 
+    $ref: log_invocation:v1

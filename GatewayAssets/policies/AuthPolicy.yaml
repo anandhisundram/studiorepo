@@ -1,0 +1,8 @@
+kind: GlobalPolicy
+metadata:
+  name: MyAuthPolicy
+  version: v1
+  namespace: global
+spec: 
+  auth_type: "api_key"
+  filter: ""

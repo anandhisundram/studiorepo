@@ -3,3 +3,6 @@ projects:
     description: DAE Project
     tags:
       - dae
+  GatewayAssets:
+    description: GatewayAssets
+    tags: []
