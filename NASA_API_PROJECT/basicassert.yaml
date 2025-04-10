@@ -1,0 +1,69 @@
+kind: assertion
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: assertion
+  version: 1.0
+  namespace: sample
+  tags:
+    - payEnv
+spec:
+  - name: Check the response has @context
+    key: json()
+    value: "@context"
+    action: haveProperty
+  - name: Check the member name as ISS (Zarya)
+    key: json().member[0].name
+    value: ISS (ZARYA)
+    action: equals
+  - name: Check the member name as ISS (Zarya)
+    key: json().member[0].name
+    value: ISS (ZARYA)
+    action: equals
+  - name: Check the total items length of 5
+    key: json().totalItems.toString()
+    value: 5
+    action: lengthOf
+  - name: Check the length of an array
+    key: json().member
+    value: 20
+    action: lengthOf
+  - name: Validate the response status
+    key: code
+    value: 200
+    action: equals
+  - name: Less Than the response Time
+    key: responseTime
+    value: 10000
+    action: lessThan
+  - name: Check status is ok
+    key: status
+    value: OK
+    action: equals
+  - key: header().Content-Type
+    value: application/text
+    action: notEquals
+    name: check the header reposne type is not text
+  - key: header().Server
+    value: cloudflare
+    action: equals
+    name: check the header response server is cloudfare
+  - key: json().parameters.search
+    value: 1
+    action: lengthOf
+    name: Assertion to validate the parameter search size is 1
+  - key: header().Content-Type
+    value: 16
+    action: lengthOf
+    name: check the header reposne type length
+  - name: check include
+    key: json().member[0].name
+    action: include
+    value: ISS
+  - name: check include in header
+    key: header().Content-Type
+    action: include
+    value: json
+  - name: check response code not equals 400
+    key: code
+    action: notEquals
+    value: 400

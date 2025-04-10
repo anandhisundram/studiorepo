@@ -1,0 +1,65 @@
+openapi: 3.0.3
+info:
+  title: TLE API
+  description: Public API for accessing Two-Line Element (TLE) data of satellites.
+  version: 1.0.0
+servers:
+  - url: https://tle.ivanstanojevic.me
+
+paths:
+  /api/tle:
+    get:
+      summary: Get list of all TLEs
+      description: Returns a list of TLE entries for satellites.
+      responses:
+        '200':
+          description: List of satellite TLEs
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  member:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TLE'
+  /api/tle/{norad_cat_id}:
+    get:
+      summary: Get TLE by NORAD catalog ID
+      parameters:
+        - name: norad_cat_id
+          in: path
+          required: true
+          description: NORAD catalog ID of the satellite
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: TLE entry for the specified satellite
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TLE'
+        '404':
+          description: Satellite not found
+
+components:
+  schemas:
+    TLE:
+      type: object
+      properties:
+        tle:
+          type: object
+          properties:
+            line1:
+              type: string
+              example: "1 25544U 98067A   24094.29858796  .00006521  00000+0  12244-3 0  9996"
+            line2:
+              type: string
+              example: "2 25544  51.6430 351.0332 0003422  42.3251  52.3826 15.50826235442876"
+        satelliteId:
+          type: integer
+          example: 25544
+        name:
+          type: string
+          example: "ISS (ZARYA)"

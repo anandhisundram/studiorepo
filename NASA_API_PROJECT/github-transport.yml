@@ -1,0 +1,11 @@
+kind: Transport
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: github-transport
+  namespace: github
+  version: '1.0'
+  tags: []
+spec:
+  protocol:
+    - http
+    - https

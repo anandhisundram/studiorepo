@@ -1,0 +1,14 @@
+kind: HTTPEndpoint
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: github-endpoint
+  namespace: github
+  version: '1.0'
+  tags: []
+spec:
+  url: https://tle.ivanstanojevic.me
+  method: GET
+  connectTimeout: 100000
+  readTimeout: 1000000
+  sslConfig:
+    keyStoreAlias: ''

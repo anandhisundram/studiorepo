@@ -1,0 +1,22 @@
+kind: test
+apiVersion: api.webmethods.io/beta
+metadata:
+  namespace: sample
+  name: sanity
+  version: 1
+  tags:
+    - functional
+spec:
+  api:
+    ##$endpoint: http://tle.ivanstanojevic.me
+    $ref: github:nasa-api:1.0
+  environment:
+    $ref: sample:environment:1
+  request:
+    - method: GET
+      resource: "/api/tle/"
+      headers:
+        - key: Accept
+          value: ${accept}
+      assertions:
+        $ref: sample:assertion:1.0

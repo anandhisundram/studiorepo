@@ -1,0 +1,10 @@
+kind: Route
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: github-routing
+  namespace: github
+  version: '1.0'
+  tags: []
+spec:
+  default-endpoint:
+    $ref: github:github-endpoint:1.0

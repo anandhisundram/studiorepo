@@ -1,0 +1,12 @@
+kind: PolicySequence
+apiVersion: api.webmethods.io/beta
+metadata:
+  name: github-api-policy-seq
+  namespace: github
+  version: '1.0'
+  tags: []
+spec:
+  transport:
+    - $ref: github:github-transport:1.0
+  routing:
+    - $ref: github:github-routing:1.0
